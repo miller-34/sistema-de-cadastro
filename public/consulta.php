@@ -1,7 +1,7 @@
 
 <?php
 
-include('conexao.php');
+require_once dirname(__DIR__) . '/src/bootstrap.php';
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ include('conexao.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Busca</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <h1>Lista de Veículos</h1>

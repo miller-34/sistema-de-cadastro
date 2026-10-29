@@ -1,6 +1,6 @@
 <?php
 
-include('conexao.php');
+require_once dirname(__DIR__) . '/src/bootstrap.php';
 $id = intval($_GET['id']);
 function limpar_texto($str){ 
     return preg_replace("/[^0-9]/", "", $str); 
@@ -66,7 +66,7 @@ $cliente = $query_cliente->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Cliente</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <main>

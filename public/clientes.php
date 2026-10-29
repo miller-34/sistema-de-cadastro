@@ -1,5 +1,5 @@
 <?php 
-include('conexao.php');
+require_once dirname(__DIR__) . '/src/bootstrap.php';
 
 $sql_clientes = "SELECT * FROM clientes";
 $query_clientes = $mysqli->query($sql_clientes) or die($mysqli->error);
@@ -12,7 +12,7 @@ $num_clientes = $query_clientes->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de clientes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <h1>Lista de Clientes</h1>
