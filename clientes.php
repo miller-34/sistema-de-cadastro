@@ -24,7 +24,7 @@ $num_clientes = $query_clientes->num_rows;
             <th>E-mail</th>
             <th>Telefone</th>
             <th>Nascimento</th>
-            <th>Data</th>
+            <th>Data de cadastro</th>
             <th>Ações</th>
         </thead>
         <tbody>

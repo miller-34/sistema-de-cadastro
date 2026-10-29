@@ -32,7 +32,7 @@ CREATE TABLE `clientes` (
   `nome` varchar(100) NOT NULL,
   `foto` varchar(100) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL DEFAULT '',
   `telefone` varchar(11) DEFAULT NULL,
   `nascimento` date DEFAULT NULL,
   `data` datetime NOT NULL DEFAULT current_timestamp(),

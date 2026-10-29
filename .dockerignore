@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+.agents
+.codex
+compose.yaml
+Dockerfile
+README.md
+crud_clientes.sql

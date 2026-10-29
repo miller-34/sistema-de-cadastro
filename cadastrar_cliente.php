@@ -42,9 +42,15 @@
     if($erro) {
             echo "<p><b>ERRO: $erro</b></p>";
     }else{
-        $sql_code = "INSERT INTO clientes (nome, email, telefone, nascimento, data) 
-        VALUES ('$nome', '$email', '$telefone', '$nascimento', NOW())";
-        $deu_certo  = $mysqli->query($sql_code) or die($mysqli->erro);
+        $telefone = $telefone ?: null;
+        $nascimento = $nascimento ?: null;
+
+        $stmt = $mysqli->prepare(
+            "INSERT INTO clientes (nome, email, senha, telefone, nascimento, data)
+            VALUES (?, ?, '', ?, ?, NOW())"
+        );
+        $stmt->bind_param('ssss', $nome, $email, $telefone, $nascimento);
+        $deu_certo = $stmt->execute();
         if($deu_certo) {
             echo "<p><b>Cliente cadastrado com sucesso!</b></p>";
             unset($_POST);
